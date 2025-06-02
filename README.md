@@ -6,7 +6,7 @@ A Model Context Protocol (MCP) server for MySQL database performance analysis an
 
 MySQL Analyzer MCP is a powerful tool that leverages AI to help database administrators and developers optimize their MySQL databases. It provides comprehensive analysis of database structure, query performance, index usage, and configuration settings, along with actionable recommendations for improvement.
 
-This tool runs as a remote MCP server using Server-Sent Events (SSE) transport, allowing it to be deployed centrally and accessed by any MCP-compatible client, including Amazon Q Developer CLI, Claude and other AI assistants that support the MCP protocol.
+This tool runs as a remote MCP server using Streamable HTTP transport, allowing it to be deployed centrally and accessed by any MCP-compatible client, including Amazon Q Developer CLI, Claude and other AI assistants that support the MCP protocol.
 
 ## ⚠️ Disclaimer
 
@@ -108,8 +108,8 @@ docker run -p 8000:8000 mysql-analyzer-mcp
 To connect to your remote MCP server, configure your MCP client with:
 
 ```
-Server URL: http://your-server-address:8000/
-Transport: SSE (Server-Sent Events)
+Server URL: http://your-server-address:8000/mcp
+Transport: Streamable HTTP
 ```
 
 ### Using with an MCP Client
